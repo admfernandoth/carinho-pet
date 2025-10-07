@@ -138,6 +138,17 @@ const server = http.createServer(async (req, res) => {
     return json(res, 200, { status: 'ok' });
   }
 
+  // versão do serviço (para validar redeploys)
+  if (pathname === '/version') {
+    try {
+      const pkgPath = path.join(staticBase, 'package.json');
+      const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'));
+      return json(res, 200, { name: pkg.name, version: pkg.version });
+    } catch (e) {
+      return json(res, 200, { version: 'unknown' });
+    }
+  }
+
   if (pathname === '/professionals' && req.method === 'GET') {
     const q = (query?.q || '').toString().toLowerCase();
     const list = mockCaregivers.filter((c) => {
