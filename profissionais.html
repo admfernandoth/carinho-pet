@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profissionais Disponíveis - Carinho Pet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="imagens/logo.png" alt="Logo Carinho Pet" style="height: 80px;"> Carinho Pet
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profissionais.html">Profissionais</a></li>
+                    <li class="nav-item"><a class="nav-link" href="comunidade.html">Comunidade</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fidelidade.html">Programa Carinhos</a></li>
+                    <li class="nav-item"><a class="btn btn-outline-primary ms-2" href="cadastro.html">Login</a></li>
+                    <li class="nav-item"><a class="btn btn-success ms-2" href="cadastro.html">Cadastre-se Grátis</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-5">
+        <div class="container">
+            <h1 class="text-center mb-4">Encontre o Profissional Ideal</h1>
+            
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8">
+                    <div class="input-group mb-3">
+                        <input id="search-input" type="text" class="form-control" placeholder="Buscar por nome ou serviço...">
+                        <button id="search-btn" class="btn btn-primary" type="button">Buscar</button>
+                    </div>
+                    <div class="text-center">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-secondary active">Todos</button>
+                            <button type="button" class="btn btn-outline-secondary">Cuidadores</button>
+                            <button type="button" class="btn btn-outline-secondary">Adestradores</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 mb-4">
+                    <div class="card professional-card-large">
+                        <div class="row g-0">
+                            <div class="col-md-3 text-center p-3 d-flex flex-column">
+                                <img src="imagens/ana-cuidadora.jpg" class="img-fluid rounded-circle mb-3 mx-auto" alt="Ana Beatriz S.">
+                                <h5 class="card-title">Ana Beatriz S.</h5>
+                                <h6 class="text-muted">Cuidadora de Cães e Gatos</h6>
+                                <div class="rating">★★★★★ <span class="ms-1 small">(32)</span></div>
+                                <div class="mt-3">
+                                    <p class="mb-1"><i class="fas fa-map-marker-alt me-2 text-danger"></i>Lapa</p>
+                                    <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#mapModalAna">
+                                        Ver no Mapa
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div id="carouselAna" class="carousel slide h-100" data-bs-ride="carousel">
+                                    <div class="carousel-inner h-100">
+                                        <div class="carousel-item active h-100">
+                                            <img src="imagens/ana-local-interno.jpg" class="d-block w-100 carousel-img" alt="Local interno da Ana">
+                                        </div>
+                                        <div class="carousel-item h-100">
+                                            <img src="imagens/ana-local-externo.jpg" class="d-block w-100 carousel-img" alt="Local externo da Ana">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselAna" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselAna" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sobre o Local de Cuidado</h5>
+                                    <p class="card-text">"Ofereço um ambiente familiar e seguro na minha casa. Tenho um quintal grande e totalmente cercado para os cães brincarem e uma sala de estar aconchegante para todos relaxarem."</p>
+                                    <div class="review-highlight">
+                                        <strong>Última Avaliação:</strong>
+                                        <p class="mb-0">"Ana foi incrível com o Max! Ele é super ansioso e ela teve toda a paciência do mundo. Recebi fotos e vídeos todos os dias."</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary mt-3 w-100">Ver Perfil e Agendar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 mb-4">
+                    <div class="card professional-card-large">
+                        <div class="row g-0">
+                            <div class="col-md-3 text-center p-3 d-flex flex-column">
+                                <img src="imagens/bruno-adestrador.jpg" class="img-fluid rounded-circle mb-3 mx-auto" alt="Bruno Oliveira">
+                                <h5 class="card-title">Bruno Oliveira</h5>
+                                <h6 class="text-muted">Adestrador Profissional</h6>
+                                <div class="rating">★★★★★ <span class="ms-1 small">(18)</span></div>
+                                <div class="mt-3">
+                                    <p class="mb-1"><i class="fas fa-map-marker-alt me-2 text-danger"></i>Centro</p>
+                                    <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#mapModalBruno">
+                                        Ver no Mapa
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div id="carouselBruno" class="carousel slide h-100" data-bs-ride="carousel">
+                                    <div class="carousel-inner h-100">
+                                        <div class="carousel-item active h-100">
+                                            <img src="imagens/bruno-local-treino.jpg" class="d-block w-100 carousel-img" alt="Local de treino do Bruno">
+                                        </div>
+                                        <div class="carousel-item h-100">
+                                            <img src="imagens/bruno-local-interno.jpg" class="d-block w-100 carousel-img" alt="Local interno do Bruno">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselBruno" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselBruno" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Sobre meu Método de Adestramento</h5>
+                                    <p class="card-text">"Utilizo reforço positivo para ensinar comandos e melhorar o comportamento do seu cão. As aulas podem ser na minha área de treino equipada ou na casa do tutor para maior comodidade."</p>
+                                    <div class="review-highlight">
+                                        <strong>Última Avaliação:</strong>
+                                        <p class="mb-0">"O Bruno transformou nosso filhote! Em poucas aulas, a Belinha já aprendeu os comandos básicos e está muito mais obediente."</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary mt-3 w-100">Ver Perfil e Agendar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 mb-4">
+                    <div class="card professional-card-large">
+                        <div class="row g-0">
+                            <div class="col-md-3 text-center p-3 d-flex flex-column">
+                                <img src="imagens/carla-catsitter.jpg" class="img-fluid rounded-circle mb-3 mx-auto" alt="Carla Mendes">
+                                <h5 class="card-title">Carla Mendes</h5>
+                                <h6 class="text-muted">Especialista em Gatos</h6>
+                                <div class="rating">★★★★★ <span class="ms-1 small">(27)</span></div>
+                                <div class="mt-3">
+                                    <p class="mb-1"><i class="fas fa-map-marker-alt me-2 text-danger"></i>Jardim Alvorada</p>
+                                    <button class="btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#mapModalCarla">
+                                        Ver no Mapa
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div id="carouselCarla" class="carousel slide h-100" data-bs-ride="carousel">
+                                    <div class="carousel-inner h-100">
+                                        <div class="carousel-item active h-100">
+                                            <img src="imagens/carla-local-gatos-1.jpg" class="d-block w-100 carousel-img" alt="Local para gatos da Carla">
+                                        </div>
+                                        <div class="carousel-item h-100">
+                                            <img src="imagens/carla-local-gatos-2.jpg" class="d-block w-100 carousel-img" alt="Local para gatos da Carla">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCarla" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselCarla" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card-body">
+                                    <h5 class="card-title">Um Paraíso para Gatos</h5>
+                                    <p class="card-text">"Minha casa é 100% 'gatificada', com arranhadores, prateleiras e brinquedos. Entendo a personalidade dos felinos e ofereço um ambiente calmo e estimulante, livre de cães."</p>
+                                    <div class="review-highlight">
+                                        <strong>Última Avaliação:</strong>
+                                        <p class="mb-0">"Deixei meus dois gatos com a Carla e foi a melhor decisão. Ela entende muito de felinos, respeitou o espaço deles."</p>
+                                    </div>
+                                    <a href="#" class="btn btn-primary mt-3 w-100">Ver Perfil e Agendar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-4 bg-dark text-white">
+        <div class="container text-center">
+            <p>&copy; 2025 Carinho Pet. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="mapModalAna" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Localização de Ana Beatriz S.</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.9113651139153!2d-51.70889162384218!3d-20.79524676451629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94913cd33b431713%3A0x6a12518e1d530663!2sR.%20Jo%C3%A3o%20Silva%2C%20850%20-%20Lapa%2C%20Tr%C3%AAs%20Lagoas%20-%20MS%2C%2079602-090!5e0!3m2!1spt-BR!2sbr!4v1726432029053!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="mapModalBruno" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Localização de Bruno Oliveira</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3734.2917242253816!2d-51.719688723842666!3d-20.77914446411518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94913c77d4631339%3A0xe5a14a38e88e8941!2sAv.%20Eloy%20Chaves%2C%201570%20-%20Centro%2C%20Tr%C3%AAs%20Lagoas%20-%20MS%2C%2079602-001!5e0!3m2!1spt-BR!2sbr!4v1726432128867!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="mapModalCarla" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Localização de Carla Mendes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3733.9961234983053!2d-51.70014042384227!3d-20.791834964379363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94913c1c73f30501%3A0x6e936c56839a84a2!2sR.%20Parana%C3%ADba%2C%202250%20-%20Jardim%20Alvorada%2C%20Tr%C3%AAs%20Lagoas%20-%20MS%2C%2079610-020!5e0!3m2!1spt-BR!2sbr!4v1726432170308!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const API = window.location.origin;
+    const listContainer = document.querySelector('.row');
+    const searchInput = document.getElementById('search-input');
+    const searchBtn = document.getElementById('search-btn');
+
+    function cardHTML(c) {
+      return `
+      <div class="col-lg-12 mb-4">
+        <div class="card professional-card-large">
+          <div class="row g-0">
+            <div class="col-md-3 text-center p-3 d-flex flex-column">
+              <img src="${c.photos?.[0] || '/imagens/logo.png'}" class="img-fluid rounded-circle mb-3 mx-auto" alt="${c.name}">
+              <h5 class="card-title">${c.name}</h5>
+              <h6 class="text-muted">${c.role}</h6>
+              <div class="rating">${'★★★★★'} <span class="ms-1 small">(${c.rating || 5})</span></div>
+              <div class="mt-3">
+                <p class="mb-1"><i class="fas fa-map-marker-alt me-2 text-danger"></i>${c.location}</p>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div id="carousel-${c.id}" class="carousel slide h-100" data-bs-ride="carousel">
+                <div class="carousel-inner h-100">
+                  ${(c.photos || []).map((p, idx) => `
+                    <div class="carousel-item ${idx===0?'active':''} h-100">
+                      <img src="${p}" class="d-block w-100 carousel-img" alt="${c.name} photo ${idx+1}">
+                    </div>
+                  `).join('')}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-${c.id}" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel-${c.id}" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-body">
+                <h5 class="card-title">Sobre</h5>
+                <p class="card-text">${c.about || ''}</p>
+                <div class="review-highlight">
+                  <strong>Última Avaliação:</strong>
+                  <p class="mb-0">${c.review || ''}</p>
+                </div>
+                <button class="btn btn-primary mt-3 w-100" onclick="openBooking('${c.id}', '${c.name}')">Ver Perfil e Agendar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      `;
+    }
+
+    async function fetchProfessionals(q='') {
+      const url = q ? `${API}/professionals?q=${encodeURIComponent(q)}` : `${API}/professionals`;
+      const res = await fetch(url);
+      return res.json();
+    }
+
+    async function renderList(q='') {
+      const items = await fetchProfessionals(q);
+      listContainer.innerHTML = items.map(cardHTML).join('');
+    }
+
+    async function openBooking(id, name) {
+      const date = prompt(`Agendar com ${name}: informe data (YYYY-MM-DD)`);
+      if (!date) return;
+      const res = await fetch(`${API}/bookings`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ professionalId: id, date }) });
+      const data = await res.json();
+      alert(data.id ? `Agendamento criado: ${data.id}` : `Erro: ${data.error || 'desconhecido'}`);
+    }
+
+    searchBtn.addEventListener('click', () => renderList(searchInput.value.trim()));
+    document.addEventListener('DOMContentLoaded', () => renderList());
+    </script>

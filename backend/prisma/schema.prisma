@@ -1,0 +1,115 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id            String   @id @default(cuid())
+  email         String   @unique
+  name          String
+  role          Role
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  caregiver     Caregiver?
+  bookings      Booking[]
+}
+
+model Caregiver {
+  id           String   @id @default(cuid())
+  userId       String   @unique
+  user         User     @relation(fields: [userId], references: [id])
+  specialty    String
+  location     String
+  rating       Float    @default(0)
+  description  String
+  photos       String[]
+  bookings     Booking[]
+}
+
+model Pet {
+  id        String   @id @default(cuid())
+  ownerId   String
+  owner     User     @relation(fields: [ownerId], references: [id])
+  name      String
+  species   String
+}
+
+model Booking {
+  id              String   @id @default(cuid())
+  ownerId         String
+  owner           User     @relation(fields: [ownerId], references: [id])
+  caregiverId     String
+  caregiver       Caregiver @relation(fields: [caregiverId], references: [id])
+  status          BookingStatus @default(PENDING)
+  startDate       DateTime
+  endDate         DateTime
+  usePoints       Boolean  @default(false)
+  includeInsurance Boolean @default(false)
+  createdAt       DateTime @default(now())
+}
+
+model TokenBalance {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  balance   Int      @default(0)
+}
+
+model InsurancePolicy {
+  id         String   @id @default(cuid())
+  bookingId  String   @unique
+  booking    Booking  @relation(fields: [bookingId], references: [id])
+  premium    Int
+  status     InsuranceStatus @default(ACTIVE)
+}
+
+model Claim {
+  id         String   @id @default(cuid())
+  policyId   String
+  policy     InsurancePolicy @relation(fields: [policyId], references: [id])
+  status     ClaimStatus @default(REVIEW)
+  evidence   String[]
+  createdAt  DateTime @default(now())
+}
+
+model Transaction {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  amount    Int
+  type      TransactionType
+  createdAt DateTime @default(now())
+}
+
+enum Role {
+  OWNER
+  CAREGIVER
+  ADMIN
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  CANCELLED
+}
+
+enum InsuranceStatus {
+  ACTIVE
+  CANCELLED
+}
+
+enum ClaimStatus {
+  REVIEW
+  APPROVED
+  REJECTED
+}
+
+enum TransactionType {
+  POINTS_PURCHASE
+  POINTS_BURN
+  PAYMENT
+}
