@@ -15,8 +15,17 @@
       "Bash(git init:*)",
       "Bash(git add:*)",
       "Bash(git commit -m \"$\\(cat <<''EOF''\nImplementação inicial do Carinho Pet\n\n- Sistema de diretório de empresas e prestadores pet\n- Next.js 14 com App Router, shadcn/ui, Tailwind CSS\n- Prisma com SQLite para banco de dados\n- 26 empresas reais de Três Lagoas-MS e região\n- Sistema de avaliações com moderação\n- Tracking de cliques em contatos\n- Painel administrativo com CRUD\n- Configuração para Google AdSense\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
-      "Bash(git rebase:*)",
-      "Bash(GIT_EDITOR=true git rebase:*)"
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "Bash(cat:*)",
+      "Bash(npx prisma db seed:*)",
+      "Bash(npm install:*)",
+      "Bash(if exist \".next\" rmdir /s /q \".next\")",
+      "Bash(git --version:*)",
+      "Bash(gh --version:*)"
     ]
   }
 }

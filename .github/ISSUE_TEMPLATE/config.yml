@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Perguntas Gerais
+    url: https://github.com/admfernandoth/carinho-pet/discussions
+    about: Use as Discussões do GitHub para perguntas gerais
+  - name: Suporte por Email
+    url: mailto:admfernandoth@gmail.com
+    about: Entre em contato por email para suporte direto

@@ -1,10 +1,21 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { Metadata } from 'next'
 import { MapPin, Star, User } from 'lucide-react'
 import { prisma } from '@/lib/db'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { TIPO_PRESTADOR_LABELS, TIPO_PRESTADOR_COLORS } from '@/types'
+
+export const metadata: Metadata = {
+  title: "Onde encontrar adestrador, cuidador e passeador de pets em Três Lagoas?",
+  description: "Encontre adestradores de cães, cuidadores de pets, passeadores e pet sitters profissionais em Três Lagoas-MS e região. Veja avaliações e entre em contato.",
+  keywords: ["adestrador três lagoas", "cuidador de pets", "passeador de cães", "pet sitter", "dog walker"],
+  openGraph: {
+    title: "Adestradores e Cuidadores de Pets em Três Lagoas | Carinho Pet",
+    description: "Profissionais de confiança para cuidar do seu pet. Adestradores, cuidadores e passeadores em Três Lagoas-MS.",
+  },
+}
 
 interface PageProps {
   searchParams: Promise<{ tipo?: string; cidade?: string }>

@@ -1,6 +1,8 @@
+import { redirect } from 'next/navigation'
 import Link from 'next/link'
-import { ArrowLeft, Check, X, Star, Clock } from 'lucide-react'
+import { ArrowLeft, Check, Star, Clock } from 'lucide-react'
 import { prisma } from '@/lib/db'
+import { isAuthenticated } from '@/lib/auth'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { AvaliacaoActions } from './AvaliacaoActions'
@@ -8,6 +10,10 @@ import { AvaliacaoActions } from './AvaliacaoActions'
 export const dynamic = 'force-dynamic'
 
 export default async function AvaliacoesPage() {
+  const authenticated = await isAuthenticated()
+  if (!authenticated) {
+    redirect('/admin/login')
+  }
   const avaliacoes = await prisma.avaliacao.findMany({
     orderBy: [
       { aprovada: 'asc' },

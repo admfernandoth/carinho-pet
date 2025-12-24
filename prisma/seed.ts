@@ -25,9 +25,9 @@ async function main() {
   const empresas = [
     // Três Lagoas-MS - Hospitais/Clínicas Veterinárias
     {
-      nome: 'CRC Vet - Hospital Veterinário 24h',
+      nome: 'CRC Vet - Hospital Veterinário',
       tipo: 'HOSPITAL_VETERINARIO',
-      descricao: 'Hospital veterinário com atendimento 24 horas, todos os dias. Oferece emergência, atendimento clínico, exames de imagem, cirurgias ortopédicas e muito mais. Fundado em 2017.',
+      descricao: 'Hospital veterinário completo. Oferece emergência, atendimento clínico, exames de imagem, cirurgias ortopédicas e muito mais. Fundado em 2017.',
       logo: '/images/logo.png',
       telefone: '(67) 3522-4367',
       whatsapp: '(67) 99715-3390',
@@ -65,7 +65,7 @@ async function main() {
     {
       nome: 'Pet 3 Shower House',
       tipo: 'HOTEL_PET',
-      descricao: 'Hotel pet completo com consultório veterinário 24h, banho e tosa, emergência 24h e pet sitter. Atendimento completo para seu pet.',
+      descricao: 'Hotel pet completo com consultório veterinário, banho e tosa e pet sitter. Atendimento completo para seu pet.',
       logo: '/images/logo.png',
       telefone: '(67) 99894-5500',
       whatsapp: '(67) 99674-8657',
@@ -74,7 +74,6 @@ async function main() {
       cidade: 'Três Lagoas-MS',
       bairro: 'Centro',
       endereco: 'Rua Dr. Oscár Guimarães, 1780 - Centro',
-      horarioFunc: '24 horas',
       destaque: true,
     },
     {

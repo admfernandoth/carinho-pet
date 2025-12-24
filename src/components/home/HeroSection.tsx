@@ -24,7 +24,7 @@ export function HeroSection() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/fundo.png"
-          alt="Pets felizes"
+          alt="Cachorro e gato felizes - Encontre os melhores serviços pet em Três Lagoas e região"
           fill
           className="object-cover"
           priority

@@ -1,20 +1,41 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/db'
+import { avaliacaoSchema, validateData, getClientIP, sanitizeString } from '@/lib/security'
+import { apiRateLimiter, checkRateLimit } from '@/lib/rate-limit'
+import { logRateLimitExceeded } from '@/lib/audit'
 
 export async function POST(request: NextRequest) {
-  try {
-    const body = await request.json()
-    const { nota, nomeAutor, comentario, empresaId, prestadorId } = body
+  const ip = getClientIP(request)
 
-    if (!nota || !nomeAutor) {
-      return NextResponse.json({ error: 'Dados incompletos' }, { status: 400 })
+  try {
+    // Verificar rate limit (10 avaliações por minuto por IP)
+    const rateLimitResult = checkRateLimit(apiRateLimiter, 10, ip)
+    if (!rateLimitResult.allowed) {
+      await logRateLimitExceeded(request, '/api/avaliacoes')
+      return NextResponse.json(
+        { error: 'Muitas requisições. Aguarde um momento.' },
+        { status: 429, headers: rateLimitResult.headers }
+      )
     }
+
+    const body = await request.json()
+
+    // Validar dados com Zod
+    const validation = validateData(avaliacaoSchema, body)
+    if (!validation.success) {
+      return NextResponse.json(
+        { error: validation.errors?.join(', ') || 'Dados inválidos' },
+        { status: 400 }
+      )
+    }
+
+    const { nota, nomeAutor, comentario, empresaId, prestadorId } = validation.data!
 
     await prisma.avaliacao.create({
       data: {
         nota,
-        nomeAutor,
-        comentario: comentario || null,
+        nomeAutor: sanitizeString(nomeAutor),
+        comentario: comentario ? sanitizeString(comentario) : null,
         empresaId: empresaId || null,
         prestadorId: prestadorId || null,
         aprovada: false,

@@ -1,0 +1,83 @@
+name: Bug Report
+description: Reportar um bug ou problema no Carinho Pet
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - admfernandoth
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por reportar um bug! Por favor, preencha as informações abaixo.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrição do Bug
+      description: Uma descrição clara do que aconteceu.
+      placeholder: Descreva o bug aqui...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para Reproduzir
+      description: Como podemos reproduzir o problema?
+      placeholder: |
+        1. Vá para '...'
+        2. Clique em '...'
+        3. Role até '...'
+        4. Veja o erro
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento Esperado
+      description: O que você esperava que acontecesse?
+      placeholder: Descreva o comportamento esperado...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Navegador
+      description: Em qual navegador você encontrou o problema?
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Outro
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: Dispositivo
+      description: Em qual dispositivo você encontrou o problema?
+      options:
+        - Desktop
+        - Tablet
+        - Mobile
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Se possível, adicione screenshots para ajudar a explicar o problema.
+      placeholder: Arraste e solte imagens aqui...
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Informações Adicionais
+      description: Qualquer outra informação relevante.
+      placeholder: Informações adicionais...

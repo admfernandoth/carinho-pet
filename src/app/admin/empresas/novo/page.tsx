@@ -9,8 +9,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { TIPO_EMPRESA_LABELS } from '@/types'
 import { generateSlug } from '@/lib/utils'
+import { AuthGuard } from '@/components/admin/AuthGuard'
 
-export default function NovaEmpresaPage() {
+function NovaEmpresaForm() {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [formData, setFormData] = useState({
@@ -227,5 +228,13 @@ export default function NovaEmpresaPage() {
         </Card>
       </div>
     </div>
+  )
+}
+
+export default function NovaEmpresaPage() {
+  return (
+    <AuthGuard>
+      <NovaEmpresaForm />
+    </AuthGuard>
   )
 }

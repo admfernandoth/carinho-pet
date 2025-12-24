@@ -1,0 +1,44 @@
+# Carinho Pet - Diretório de Serviços Pet
+# https://carinhopet.com.br
+
+User-agent: *
+Allow: /
+
+# Permitir crawlers de IA
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Perplexity
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GoogleBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Bloquear acesso à área administrativa
+Disallow: /admin/
+Disallow: /api/admin/
+Disallow: /api/auth/
+
+# Sitemap
+Sitemap: https://carinhopet.com.br/sitemap.xml

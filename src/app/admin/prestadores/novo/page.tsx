@@ -9,8 +9,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { TIPO_PRESTADOR_LABELS } from '@/types'
 import { generateSlug } from '@/lib/utils'
+import { AuthGuard } from '@/components/admin/AuthGuard'
 
-export default function NovoPrestadorPage() {
+function NovoPrestadorForm() {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [formData, setFormData] = useState({
@@ -205,5 +206,13 @@ export default function NovoPrestadorPage() {
         </Card>
       </div>
     </div>
+  )
+}
+
+export default function NovoPrestadorPage() {
+  return (
+    <AuthGuard>
+      <NovoPrestadorForm />
+    </AuthGuard>
   )
 }

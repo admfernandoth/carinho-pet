@@ -1,12 +1,18 @@
+import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import { Building2, Users, MousePointer, Star, ArrowRight } from 'lucide-react'
 import { prisma } from '@/lib/db'
+import { isAuthenticated } from '@/lib/auth'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 
 export const dynamic = 'force-dynamic'
 
 export default async function AdminPage() {
+  const authenticated = await isAuthenticated()
+  if (!authenticated) {
+    redirect('/admin/login')
+  }
   const [
     totalEmpresas,
     totalPrestadores,
@@ -63,7 +69,7 @@ export default async function AdminPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div>
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Painel Administrativo</h1>
         <p className="text-gray-600 mb-8">Gerencie empresas, prestadores e visualize estatísticas</p>

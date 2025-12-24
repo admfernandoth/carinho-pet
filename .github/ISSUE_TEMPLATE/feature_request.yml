@@ -1,0 +1,69 @@
+name: Feature Request
+description: Sugerir uma nova funcionalidade para o Carinho Pet
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+assignees:
+  - admfernandoth
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por sugerir uma nova funcionalidade! Por favor, descreva sua ideia.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema ou Necessidade
+      description: Qual problema essa funcionalidade resolveria?
+      placeholder: Descreva o problema ou necessidade...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solução Proposta
+      description: Como você imagina que essa funcionalidade funcionaria?
+      placeholder: Descreva a solução...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridade
+      description: Qual a urgência dessa funcionalidade para você?
+      options:
+        - Alta - Essencial para uso
+        - Média - Importante mas não urgente
+        - Baixa - Seria bom ter
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user-type
+    attributes:
+      label: Tipo de Usuário
+      description: Você é um(a):
+      options:
+        - Tutor de pet (usuário)
+        - Empresa/Prestador cadastrado
+        - Potencial anunciante
+        - Outro
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas Consideradas
+      description: Você considerou outras soluções?
+      placeholder: Descreva alternativas que você pensou...
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Contexto Adicional
+      description: Qualquer outra informação ou screenshots.
+      placeholder: Informações adicionais...

@@ -1,10 +1,21 @@
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { MapPin, Star, Building2 } from 'lucide-react'
 import { prisma } from '@/lib/db'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
 import { TIPO_EMPRESA_LABELS, TIPO_EMPRESA_COLORS } from '@/types'
+
+export const metadata: Metadata = {
+  title: "Quais são os melhores pet shops e clínicas veterinárias em Três Lagoas?",
+  description: "Lista completa de pet shops, clínicas veterinárias, hospitais e hotéis pet em Três Lagoas-MS e região. Encontre endereço, telefone, WhatsApp e avaliações de clientes.",
+  keywords: ["pet shop três lagoas", "clínica veterinária três lagoas", "hospital veterinário", "hotel pet", "banho e tosa"],
+  openGraph: {
+    title: "Pet Shops e Clínicas Veterinárias em Três Lagoas | Carinho Pet",
+    description: "Encontre os melhores pet shops e clínicas veterinárias em Três Lagoas-MS. Lista completa com contatos e avaliações.",
+  },
+}
 
 interface PageProps {
   searchParams: Promise<{ tipo?: string; cidade?: string; busca?: string }>

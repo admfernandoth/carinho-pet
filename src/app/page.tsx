@@ -2,6 +2,7 @@ import { HeroSection } from '@/components/home/HeroSection'
 import { CategoriesSection } from '@/components/home/CategoriesSection'
 import { HowItWorks } from '@/components/home/HowItWorks'
 import { FeaturedSection } from '@/components/home/FeaturedSection'
+import { FAQSection } from '@/components/home/FAQSection'
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <CategoriesSection />
       <FeaturedSection />
       <HowItWorks />
+      <FAQSection />
     </>
   )
 }

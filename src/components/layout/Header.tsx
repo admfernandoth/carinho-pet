@@ -22,7 +22,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2">
           <Image
             src="/images/logo.png"
-            alt="Carinho Pet"
+            alt="Carinho Pet - Diretório de serviços pet em Três Lagoas e região"
             width={300}
             height={100}
             className="h-20 w-auto"

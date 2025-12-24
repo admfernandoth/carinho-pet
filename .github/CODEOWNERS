@@ -1,0 +1,16 @@
+# Arquivo CODEOWNERS - Define responsáveis por revisão de código
+# Documentação: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Owners padrão para todo o repositório
+*       @admfernandoth
+
+# Configurações e CI/CD
+/.github/       @admfernandoth
+/prisma/        @admfernandoth
+
+# Código fonte
+/src/           @admfernandoth
+
+# Documentação
+/docs/          @admfernandoth
+*.md            @admfernandoth
