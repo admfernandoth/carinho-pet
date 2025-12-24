@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Prestador {
+  id             String          @id @default(cuid())
+  nome           String
+  slug           String          @unique
+  tipo           String
+  descricao      String
+  foto           String
+  fotos          String          @default("[]")
+  telefone       String
+  whatsapp       String?
+  email          String?
+  instagram      String?
+  cidade         String
+  bairro         String?
+  endereco       String?
+  destaque       Boolean         @default(false)
+  ativo          Boolean         @default(true)
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  avaliacoes     Avaliacao[]
+  cliquesContato CliqueContato[]
+}
+
+model Empresa {
+  id             String          @id @default(cuid())
+  nome           String
+  slug           String          @unique
+  tipo           String
+  descricao      String
+  logo           String
+  fotos          String          @default("[]")
+  telefone       String
+  whatsapp       String?
+  email          String?
+  website        String?
+  instagram      String?
+  cidade         String
+  bairro         String?
+  endereco       String
+  horarioFunc    String?
+  destaque       Boolean         @default(false)
+  ativo          Boolean         @default(true)
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+  avaliacoes     Avaliacao[]
+  cliquesContato CliqueContato[]
+}
+
+model Avaliacao {
+  id          String     @id @default(cuid())
+  nota        Int
+  comentario  String?
+  nomeAutor   String
+  emailAutor  String?
+  aprovada    Boolean    @default(false)
+  prestadorId String?
+  prestador   Prestador? @relation(fields: [prestadorId], references: [id], onDelete: Cascade)
+  empresaId   String?
+  empresa     Empresa?   @relation(fields: [empresaId], references: [id], onDelete: Cascade)
+  createdAt   DateTime   @default(now())
+}
+
+model CliqueContato {
+  id          String     @id @default(cuid())
+  tipoContato String
+  prestadorId String?
+  prestador   Prestador? @relation(fields: [prestadorId], references: [id], onDelete: Cascade)
+  empresaId   String?
+  empresa     Empresa?   @relation(fields: [empresaId], references: [id], onDelete: Cascade)
+  ip          String?
+  userAgent   String?
+  createdAt   DateTime   @default(now())
+}
