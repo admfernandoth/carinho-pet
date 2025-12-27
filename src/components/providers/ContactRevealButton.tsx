@@ -101,7 +101,7 @@ export function ContactRevealButton({
       {/* WhatsApp */}
       {whatsapp && (
         <a
-          href={getWhatsAppLink(whatsapp, 'Olá! Encontrei vocês no Carinho Pet e gostaria de mais informações.')}
+          href={getWhatsAppLink(whatsapp, 'Olá! Encontrei vocês no Amor Patas e gostaria de mais informações.')}
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => handleContactClick('whatsapp')}

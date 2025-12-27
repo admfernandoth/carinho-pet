@@ -49,8 +49,8 @@ export default function LoginPage() {
         <CardHeader className="text-center">
           <div className="flex justify-center mb-4">
             <Image
-              src="/images/logo.png"
-              alt="Carinho Pet"
+              src="/images/logo_amorpatas.png"
+              alt="Amor Patas"
               width={200}
               height={67}
               className="h-16 w-auto"
@@ -78,7 +78,7 @@ export default function LoginPage() {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="admin@carinhopet.com.br"
+                  placeholder="admin@amorpatas.com.br"
                   className="pl-10"
                 />
               </div>

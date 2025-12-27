@@ -4,10 +4,10 @@ import { Heart, MapPin, Users, Building2 } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 
 export const metadata: Metadata = {
-  title: "Quem somos? Conheça o Carinho Pet - Diretório de Serviços Pet",
-  description: "O Carinho Pet é o maior diretório gratuito de serviços pet em Três Lagoas-MS e região. Conectamos tutores de animais aos melhores profissionais e empresas num raio de 100km.",
+  title: "Quem somos? Conheça o Amor Patas - Diretório de Serviços Pet",
+  description: "O Amor Patas é o maior diretório gratuito de serviços pet em Três Lagoas-MS e região. Conectamos tutores de animais aos melhores profissionais e empresas num raio de 100km.",
   openGraph: {
-    title: "Sobre o Carinho Pet | Diretório de Serviços Pet",
+    title: "Sobre o Amor Patas | Diretório de Serviços Pet",
     description: "Conheça nossa missão: facilitar a vida dos tutores de pets oferecendo um diretório completo, confiável e gratuito.",
   },
 }
@@ -24,7 +24,7 @@ export default function SobrePage() {
                 Quem <span className="text-primary">Somos</span>
               </h1>
               <p className="text-lg text-gray-600 mb-6">
-                O Carinho Pet nasceu com um propósito simples: conectar tutores de animais aos melhores
+                O Amor Patas nasceu com um propósito simples: conectar tutores de animais aos melhores
                 profissionais e empresas do ramo pet na região de Três Lagoas e cidades vizinhas.
               </p>
               <p className="text-lg text-gray-600">
@@ -36,7 +36,7 @@ export default function SobrePage() {
             <div className="relative h-80 lg:h-96 rounded-2xl overflow-hidden shadow-xl">
               <Image
                 src="/images/quem_somos.png"
-                alt="Equipe Carinho Pet - Conectando tutores de pets aos melhores profissionais da região de Três Lagoas"
+                alt="Equipe Amor Patas - Conectando tutores de pets aos melhores profissionais da região de Três Lagoas"
                 fill
                 className="object-cover"
               />

@@ -22,8 +22,8 @@ export function AdminHeader() {
           <div className="flex items-center gap-8">
             <Link href="/admin" className="flex items-center gap-2">
               <Image
-                src="/images/logo.png"
-                alt="Carinho Pet"
+                src="/images/logo_amorpatas.png"
+                alt="Amor Patas"
                 width={120}
                 height={40}
                 className="h-8 w-auto"

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { prisma } from '@/lib/db'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://carinhopet.com.br'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://amorpatas.com.br'
 
   // Buscar empresas ativas
   const empresas = await prisma.empresa.findMany({

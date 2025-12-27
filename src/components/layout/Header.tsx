@@ -21,8 +21,8 @@ export function Header() {
       <div className="container mx-auto flex h-24 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/images/logo.png"
-            alt="Carinho Pet - Diretório de serviços pet em Três Lagoas e região"
+            src="/images/logo_amorpatas.png"
+            alt="Amor Patas - Diretório de serviços pet em Três Lagoas e região"
             width={300}
             height={100}
             className="h-20 w-auto"

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: "Encontre adestradores de cães, cuidadores de pets, passeadores e pet sitters profissionais em Três Lagoas-MS e região. Veja avaliações e entre em contato.",
   keywords: ["adestrador três lagoas", "cuidador de pets", "passeador de cães", "pet sitter", "dog walker"],
   openGraph: {
-    title: "Adestradores e Cuidadores de Pets em Três Lagoas | Carinho Pet",
+    title: "Adestradores e Cuidadores de Pets em Três Lagoas | Amor Patas",
     description: "Profissionais de confiança para cuidar do seu pet. Adestradores, cuidadores e passeadores em Três Lagoas-MS.",
   },
 }

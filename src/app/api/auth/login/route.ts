@@ -7,7 +7,7 @@ import { logLoginAttempt, logRateLimitExceeded } from '@/lib/audit'
 
 // Credenciais do admin (em produção, use variáveis de ambiente)
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'admfernandoth@gmail.com'
-const ADMIN_PASSWORD_HASH = process.env.ADMIN_PASSWORD_HASH || bcrypt.hashSync('carinhopet2024', 10)
+const ADMIN_PASSWORD_HASH = process.env.ADMIN_PASSWORD_HASH || bcrypt.hashSync('amorpatas2024', 10)
 
 export async function POST(request: NextRequest) {
   const ip = getClientIP(request)

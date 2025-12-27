@@ -5,10 +5,10 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Descrição */}
           <div className="md:col-span-1">
-            <h3 className="font-semibold text-white mb-4">Carinho Pet</h3>
+            <h3 className="font-semibold text-white mb-4">Amor Patas</h3>
             <p className="text-sm text-gray-400">
               Encontre os melhores profissionais e empresas para cuidar do seu pet com todo o carinho que ele merece.
             </p>
@@ -36,6 +36,28 @@ export function Footer() {
               <li>
                 <Link href="/sobre" className="hover:text-white transition-colors">
                   Sobre Nós
+                </Link>
+              </li>
+              <li>
+                <Link href="/contato" className="hover:text-white transition-colors">
+                  Contato
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h3 className="font-semibold text-white mb-4">Legal</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/termos" className="hover:text-white transition-colors">
+                  Termos de Uso
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacidade" className="hover:text-white transition-colors">
+                  Política de Privacidade
                 </Link>
               </li>
             </ul>
@@ -97,7 +119,7 @@ export function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} Carinho Pet. Todos os direitos reservados.
+            © {new Date().getFullYear()} Amor Patas. Todos os direitos reservados.
           </p>
           <p className="text-sm text-gray-400 flex items-center gap-1">
             Feito com <Heart size={14} className="text-red-500 fill-red-500" /> para os amantes de pets

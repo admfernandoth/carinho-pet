@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps) {
   }
 
   return {
-    title: `${prestador.nome} - Carinho Pet`,
+    title: `${prestador.nome} - Amor Patas`,
     description: prestador.descricao,
   }
 }

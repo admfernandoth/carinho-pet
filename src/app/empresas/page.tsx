@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: "Lista completa de pet shops, clínicas veterinárias, hospitais e hotéis pet em Três Lagoas-MS e região. Encontre endereço, telefone, WhatsApp e avaliações de clientes.",
   keywords: ["pet shop três lagoas", "clínica veterinária três lagoas", "hospital veterinário", "hotel pet", "banho e tosa"],
   openGraph: {
-    title: "Pet Shops e Clínicas Veterinárias em Três Lagoas | Carinho Pet",
+    title: "Pet Shops e Clínicas Veterinárias em Três Lagoas | Amor Patas",
     description: "Encontre os melhores pet shops e clínicas veterinárias em Três Lagoas-MS. Lista completa com contatos e avaliações.",
   },
 }

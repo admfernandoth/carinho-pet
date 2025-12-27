@@ -6,15 +6,15 @@ import { Card, CardContent } from '@/components/ui/card'
 
 const faqs = [
   {
-    pergunta: "Quais tipos de serviços pet posso encontrar no Carinho Pet?",
-    resposta: "No Carinho Pet você encontra pet shops, clínicas veterinárias, hospitais veterinários, hotéis pet, serviços de banho e tosa, adestradores de cães, cuidadores de pets, passeadores (dog walkers) e pet sitters. Todos os estabelecimentos e profissionais são da região de Três Lagoas-MS e cidades num raio de 100km."
+    pergunta: "Quais tipos de serviços pet posso encontrar no Amor Patas?",
+    resposta: "No Amor Patas você encontra pet shops, clínicas veterinárias, hospitais veterinários, hotéis pet, serviços de banho e tosa, adestradores de cães, cuidadores de pets, passeadores (dog walkers) e pet sitters. Todos os estabelecimentos e profissionais são da região de Três Lagoas-MS e cidades num raio de 100km."
   },
   {
-    pergunta: "O Carinho Pet é gratuito para usar?",
-    resposta: "Sim, o Carinho Pet é 100% gratuito para tutores de pets. Você pode pesquisar, ver contatos e avaliar empresas e profissionais sem nenhum custo. Nosso objetivo é facilitar a vida de quem ama animais conectando você aos melhores serviços da região."
+    pergunta: "O Amor Patas é gratuito para usar?",
+    resposta: "Sim, o Amor Patas é 100% gratuito para tutores de pets. Você pode pesquisar, ver contatos e avaliar empresas e profissionais sem nenhum custo. Nosso objetivo é facilitar a vida de quem ama animais conectando você aos melhores serviços da região."
   },
   {
-    pergunta: "Quais cidades são atendidas pelo Carinho Pet?",
+    pergunta: "Quais cidades são atendidas pelo Amor Patas?",
     resposta: "Atendemos Três Lagoas-MS (centro) e todas as cidades num raio de aproximadamente 100km, incluindo: Andradina-SP (41km), Castilho-SP (31km), Ilha Solteira-SP (68km), Brasilândia-MS (70km), Selvíria-MS (~80km) e Mirandópolis-SP (86km)."
   },
   {
@@ -22,7 +22,7 @@ const faqs = [
     resposta: "Basta acessar a página do estabelecimento ou profissional e clicar no botão 'Deixar Avaliação'. Você informa seu nome, seleciona uma nota de 1 a 5 estrelas e pode deixar um comentário sobre sua experiência. Todas as avaliações passam por moderação antes de serem publicadas."
   },
   {
-    pergunta: "Como cadastrar minha empresa ou serviço pet no Carinho Pet?",
+    pergunta: "Como cadastrar minha empresa ou serviço pet no Amor Patas?",
     resposta: "Se você tem um pet shop, clínica veterinária ou oferece serviços pet na região de Três Lagoas, entre em contato conosco pelo WhatsApp (66) 99669-1709 ou email admfernandoth@gmail.com. Analisaremos seu cadastro e incluiremos seu negócio no diretório."
   },
   {
@@ -62,7 +62,7 @@ export function FAQSection() {
             Perguntas Frequentes
           </h2>
           <p className="text-gray-600 text-center mb-10">
-            Tire suas dúvidas sobre o Carinho Pet e serviços pet na região
+            Tire suas dúvidas sobre o Amor Patas e serviços pet na região
           </p>
 
           <div className="space-y-3">

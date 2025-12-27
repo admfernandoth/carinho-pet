@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { CookieBanner } from "@/components/CookieBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,15 +16,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://carinhopet.com.br";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://amorpatas.com.br";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Onde encontrar pet shop e veterinário em Três Lagoas? | Carinho Pet",
-    template: "%s | Carinho Pet"
+    default: "Onde encontrar pet shop e veterinário em Três Lagoas? | Amor Patas",
+    template: "%s | Amor Patas"
   },
-  description: "Procurando pet shop, clínica veterinária ou cuidador de pets em Três Lagoas-MS? O Carinho Pet é o maior diretório gratuito de serviços pet da região, com empresas em Três Lagoas, Andradina, Ilha Solteira e mais 4 cidades num raio de 100km.",
+  description: "Procurando pet shop, clínica veterinária ou cuidador de pets em Três Lagoas-MS? O Amor Patas é o maior diretório gratuito de serviços pet da região, com empresas em Três Lagoas, Andradina, Ilha Solteira e mais 4 cidades num raio de 100km.",
   keywords: [
     "pet shop três lagoas",
     "veterinário três lagoas",
@@ -36,9 +37,9 @@ export const metadata: Metadata = {
     "veterinário ilha solteira",
     "serviços pet MS"
   ],
-  authors: [{ name: "Carinho Pet" }],
-  creator: "Carinho Pet",
-  publisher: "Carinho Pet",
+  authors: [{ name: "Amor Patas" }],
+  creator: "Amor Patas",
+  publisher: "Amor Patas",
   robots: {
     index: true,
     follow: true,
@@ -54,21 +55,21 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: siteUrl,
-    siteName: "Carinho Pet",
-    title: "Carinho Pet - Diretório de Serviços Pet em Três Lagoas e Região",
+    siteName: "Amor Patas",
+    title: "Amor Patas - Diretório de Serviços Pet em Três Lagoas e Região",
     description: "Encontre os melhores pet shops, clínicas veterinárias, adestradores e cuidadores de animais em Três Lagoas-MS e região. Avalie e encontre o cuidado perfeito para seu pet.",
     images: [
       {
         url: `${siteUrl}/images/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Carinho Pet - Diretório de Serviços Pet",
+        alt: "Amor Patas - Diretório de Serviços Pet",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Carinho Pet - Diretório de Serviços Pet",
+    title: "Amor Patas - Diretório de Serviços Pet",
     description: "Encontre os melhores profissionais e empresas para cuidar do seu pet em Três Lagoas e região.",
     images: [`${siteUrl}/images/og-image.png`],
   },
@@ -84,10 +85,10 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Carinho Pet",
+  "name": "Amor Patas",
   "description": "Diretório de serviços pet em Três Lagoas e região. Encontre pet shops, clínicas veterinárias, adestradores e cuidadores de animais.",
   "url": siteUrl,
-  "logo": `${siteUrl}/images/logo.png`,
+  "logo": `${siteUrl}/images/logo_amorpatas.png`,
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": "+55-66-99669-1709",
@@ -107,7 +108,7 @@ const organizationSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Carinho Pet",
+  "name": "Amor Patas",
   "description": "Onde encontrar os melhores serviços pet em Três Lagoas e região?",
   "url": siteUrl,
   "potentialAction": {
@@ -123,7 +124,7 @@ const websiteSchema = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Carinho Pet - Diretório Pet",
+  "name": "Amor Patas - Diretório Pet",
   "description": "Diretório online gratuito de pet shops, clínicas veterinárias, adestradores e cuidadores em Três Lagoas-MS e região num raio de 100km.",
   "url": siteUrl,
   "telephone": "+55-66-99669-1709",
@@ -197,6 +198,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );
